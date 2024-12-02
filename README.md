@@ -4,17 +4,17 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/HelpLee/Elsevier-Crawler">
+  <a href="https://github.com/HelpLee/Springer-Crawler">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Elsevier-crawler</h3>
+  <h3 align="center">Springer-crawler</h3>
 
   <p align="center">
     A Python-based web scraper for extracting publication metadata from scientific journals, including titles, submission (received, revised, accepted), and online dates. This tool automates data collection from platforms like SpringerLink, making it easier for researchers to gather insights efficiently.
     <br />
     ·
-    <a href="https://github.com/HelpLee/Elsevier-Crawler/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/HelpLee/Springer-Crawler/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
   </p>
 </div>
@@ -114,8 +114,8 @@ To set up and run the project locally, follow these steps:
 
 1. Clone the repository
 ```bash
-git clone https://github.com/your_username/Elsevier-Crawler.git
-cd Elsevier-Crawler
+git clone https://github.com/your_username/Springer-Crawler.git
+cd Springer-Crawler
 ```
 
 2. Run the script:
@@ -133,9 +133,34 @@ python scraper.py
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-### Extract Metadata:
-- Specify the journal name and choose between querying recent articles or a specific volume-issue.
-- The script will navigate through the journal's issues, extract metadata like titles and dates, and save the data to a CSV file.
+### Detailed Step-by-Step Usage:
+1. **Run the Script**:
+   - Start the script by running the following command:
+     ```bash
+     python scraper.py
+     ```
+
+2. **Enter Journal Name**:
+   - The script will prompt you to enter the journal name. Make sure to replace spaces with a "+" symbol (e.g., "Nature Chemistry" should be entered as "Nature+Chemistry").
+
+3. **Select Query Mode**:
+   - You will be asked whether you want to:
+     - **Query Recent Articles**: Enter '0' to scrape metadata for a specific number of recent articles.
+     - **Query by Volume and Issue**: Enter '1' to specify a particular volume and issue of the journal.
+
+4. **Input Details for Query**:
+   - **For Recent Articles**:
+     - Enter the number of recent articles you wish to scrape (e.g., "5" for the latest 5 articles).
+   - **For Specific Volume and Issue**:
+     - Enter the volume and issue in the format "Volume-Issue" (e.g., "1-1" for Volume 1, Issue 1).
+
+5. **Processing**:
+   - The script will process the given input, access the relevant journal pages, and start fetching metadata like titles, received dates, revised dates, accepted dates, and publication dates.
+   - You will see progress messages indicating which articles are being processed.
+
+6. **CSV Output**:
+   - Once the data extraction is complete, the extracted metadata will be saved in a CSV file.
+   - The CSV file will be located in the "Journal_Acceptance_Statistics" directory with the naming convention `{journal_title}_Volume_{volume}_Issue_{issue}.csv` or `{journal_title}_latest_{num_articles}_articles.csv`.
 
 ### Example Output:
 
