@@ -141,7 +141,7 @@ python scraper.py
      ```
 
 2. **Enter Journal Name**:
-   - The script will prompt you to enter the journal name. Make sure to replace spaces with a "+" symbol (e.g., "Nature Chemistry" should be entered as "Nature+Chemistry").
+   - The script will prompt you to enter the journal name. Simply enter the full name of the journal (e.g., "Nature Chemistry").
 
 3. **Select Query Mode**:
    - You will be asked whether you want to:
